@@ -1,0 +1,18 @@
+def fow(arr, n, number):
+    if n == len(number):
+        print(arr)
+        return
+    for i in range(len(number)):
+        if not used[i]:
+            used[i] = 1
+            arr.append(number[i])
+            fow(arr, n+1)
+            arr.pop()
+            used[i] = 0
+
+
+arr = list(map(int, input().split()))
+used = [0]*len(arr[1:])
+answer_list = []
+
+fow(0, [], arr[1:])

@@ -1,0 +1,23 @@
+N = 10
+
+def test(depth, plus, minus, multiply, divide):
+    if depth == N:
+        print("끝")
+        return
+
+
+    if plus:
+        test(depth+1, plus-1, minus, multiply, divide)
+        print("+")
+    if minus:
+        test(depth+1, plus, minus-1, multiply, divide)
+        print("-")
+    if multiply:
+        test(depth+1, plus, minus, multiply-1, divide)
+        print("*")
+    if divide:
+        test(depth+1, plus, minus, multiply, divide-1)
+        print("/")
+
+
+test(0, 2, 1, 1, 1)
