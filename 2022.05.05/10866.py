@@ -42,5 +42,4 @@ for i in range(n):
         if d:
             print(d[len(d) - 1])
         else:
-            
             print("-1")
